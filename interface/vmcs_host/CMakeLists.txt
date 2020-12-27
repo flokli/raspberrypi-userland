@@ -17,7 +17,7 @@ add_library(vchostif
 #add_library(bufman            vc_vchi_bufman.c            )
 set(INSTALL_TARGETS vchostif)
 
-if(NOT ARM64)
+if(ARM AND NOT ARM64)
 	# OpenMAX/IL component service
 	add_library(vcilcs
 		    vcilcs.c vcilcs_in.c vcilcs_out.c vcilcs_common.c)
